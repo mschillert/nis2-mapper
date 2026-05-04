@@ -596,8 +596,10 @@ const CSS = `
 .dash-legend{flex-direction:column;gap:8px}
 .dash-legend-row{font-size:12px}
 .gap-banner{font-size:11px;padding:10px 12px}
-.n2a-head{grid-template-columns:20px 1fr;gap:6px;padding:8px 8px}
-.n2a-body{padding:0 4px 8px 20px}
+.n2a{margin-bottom:10px}
+.n2a-head{grid-template-columns:32px 1fr;gap:8px;padding:10px 8px}
+.n2a-body{padding:0 4px 8px 32px}
+.bi{gap:8px}
 .bd{white-space:normal;font-size:11px}
 .bt{height:20px;border-radius:10px}
 .n2s-head{gap:5px;padding:4px 0}
