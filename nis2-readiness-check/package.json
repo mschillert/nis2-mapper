@@ -1,0 +1,21 @@
+{
+  "name": "nis2-readiness-check",
+  "version": "0.10.0",
+  "private": true,
+  "type": "module",
+  "description": "NIS2 Readiness Check — Wie weit deckt deine ISO 27001:2022-Umsetzung die NIS2-Anforderungen ab?",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.14"
+  }
+}
