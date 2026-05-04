@@ -565,7 +565,67 @@ const CSS = `
 .cr-val input{width:100%;font-size:11px;padding:4px 2px;border-radius:4px;border:.5px solid var(--bd3);background:var(--bg-p);color:var(--tx);font-family:var(--fm);text-align:center}.cr-val input:focus{outline:1.5px solid var(--bx);border-color:var(--bx)}
 :root.dark .sb{background:#3a3a3a!important}:root.dark .bl,:root.dark .cg-label,:root.dark .n2s-num{color:var(--bx)!important}:root.dark .cr.chg{background:rgba(239,159,39,.06)!important}:root.dark .dev-ban{background:rgba(239,159,39,.12)!important;color:#EF9F27!important}:root.dark .dev-ban button{border-color:#EF9F27!important;color:#EF9F27!important}:root.dark .toast.ok{background:#1a2e14;color:#97C459;border-color:#2d4a1e}:root.dark .toast.err{background:#2e1414;color:#F09595;border-color:#4a1e1e}:root.dark .gap-banner{background:rgba(154,154,154,.08)}
 .iso-help{background:var(--bg-p);border-radius:var(--rl);border:.5px solid var(--bd3);overflow:hidden}.iso-help-head{display:flex;align-items:center;gap:8px;padding:10px 16px;cursor:pointer;font-size:12px;color:var(--tx2);transition:background .1s;user-select:none}.iso-help-head:hover{background:var(--bg-s)}.iso-help-head svg{flex-shrink:0;color:var(--tx3)}.iso-help-chev{transition:transform .2s}.iso-help-chev.open{transform:rotate(180deg)}.iso-help-body{padding:0 16px 14px;font-size:12px;line-height:1.65;color:var(--tx2)}.iso-help-body p{margin-bottom:8px}.iso-help-body ul{margin:0 0 8px 18px}.iso-help-body li{margin-bottom:4px}
-@media(max-width:700px){.sb{width:52px}.sl span,.ni-label,.sf-body,.sf-chev,.meth-link-label{display:none}.meth-link{justify-content:center;padding:10px 0}.sl{padding:16px 12px 12px;justify-content:center}.ni{padding:10px 0;justify-content:center}.sf{padding:0 8px;margin-top:12px}.sf-card{padding:8px;justify-content:center}.ct-actions{flex-wrap:wrap}}
+.mob-menu{display:none;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:transparent;color:var(--tx2);cursor:pointer;border-radius:var(--rm);flex-shrink:0;padding:0}.mob-menu:hover{background:var(--bg-s)}.mob-menu svg{width:20px;height:20px}
+.mob-backdrop{display:none}
+@media(max-width:640px){
+.mob-menu{display:flex}
+.mob-backdrop{display:block;position:fixed;inset:0;z-index:850;background:rgba(0,0,0,.4);animation:pdf-fade-in .15s}
+.sh{display:flex;flex-direction:column}
+.sb{position:fixed;left:0;top:0;height:100vh;z-index:900;width:240px;transform:translateX(-100%);transition:transform .25s ease}
+.sb:not(.col){transform:translateX(0)}
+.sb.col{width:240px}
+.sb.col .sl span,.sb.col .ni-label,.sb.col .sf-body,.sb.col .sf-chev,.sb.col .meth-link-label{display:revert}
+.sb.col .meth-link{justify-content:flex-start;padding:10px 16px}
+.sb.col .sl{padding:20px 16px 12px;justify-content:flex-start}
+.sb.col .ni{padding:10px 16px;justify-content:flex-start}
+.sb.col .sf{padding:0 16px;margin-top:16px}
+.sb.col .sf-card{padding:10px 12px;justify-content:flex-start}
+.mn{flex:1;width:100%;overflow-y:auto}
+.tb{padding:10px 16px;gap:8px}.tb h1{font-size:14px}
+.ct{padding:12px}
+.cd{padding:14px 14px;border-radius:var(--rm)}
+.ct-actions{flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.ct-actions button{padding:10px 14px;font-size:12px}
+.dash-status{flex-direction:column;align-items:stretch;gap:12px}
+.dash-status .dv{display:none}
+.dash-status .dash-donut{display:flex;justify-content:center}
+.dash-nis2{flex-direction:row;justify-content:center;align-items:baseline;gap:10px;min-width:0}
+.dash-nis2-val{font-size:36px}
+.dash-guide{padding:8px 0}
+.dash-guide-btn{padding:10px 16px;width:100%;text-align:center}
+.dash-legend{flex-direction:column;gap:8px}
+.dash-legend-row{font-size:12px}
+.gap-banner{font-size:11px;padding:10px 12px}
+.n2a-head{grid-template-columns:20px 1fr;gap:6px;padding:8px 8px}
+.n2a-body{padding:0 4px 8px 20px}
+.bd{white-space:normal;font-size:11px}
+.bt{height:20px;border-radius:10px}
+.n2s-head{gap:5px;padding:4px 0}
+.n2s-name{font-size:11px;white-space:normal}
+.n2s-bar{width:44px}
+.n2c{padding:6px 0 2px 20px}
+.n2cr{flex-wrap:wrap;gap:4px;padding:4px 0}
+.n2cr-name{font-size:10px;white-space:normal}
+.cr-ch{display:none}
+.cr{grid-template-columns:44px 1fr 56px;padding:0 10px;min-height:44px}
+.cr-id{display:none}
+.cr-name-wrap{padding:8px 2px 8px 0}
+.cr-name-text{font-size:12px;white-space:normal}
+.no-n2{font-size:9px;padding:1px 4px}
+.cr-val input{font-size:12px;padding:6px 4px}
+.cr-tog{width:32px;height:18px;border-radius:9px}.cr-tog::after{width:14px;height:14px;top:2px;left:2px}.cr-tog.on::after{left:16px}
+.cg-head{padding:10px 12px}
+.dp{width:100vw;max-width:100vw}
+.dp-head{padding:16px 16px 12px}
+.dp-section{padding:14px 16px}
+.dp-close{width:36px;height:36px}
+.pdf-modal{width:100%;margin:0 8px;padding:20px 18px}
+.toast{left:12px;right:12px;top:auto;bottom:20px;max-width:none}
+.ta-tip,.bt-hatch-tip,.bi .area-tip,.tip-box{display:none!important}
+.iso-help-body{font-size:12px}
+.dev-ban{font-size:11px;padding:0 12px;min-height:40px}
+.ct2{font-size:14px;margin-bottom:16px}
+}
 
 .pdf-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;animation:pdf-fade-in .15s}.pdf-modal{background:var(--bg-p);border-radius:var(--rl);padding:24px 28px;width:380px;max-width:90vw;box-shadow:0 12px 40px rgba(0,0,0,.2)}.pdf-title{font-size:15px;font-weight:500;margin-bottom:4px}.pdf-sub{font-size:11px;color:var(--tx2);margin-bottom:18px;line-height:1.5}
 .pdf-opt{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--bg-s);border-radius:var(--rm);margin-bottom:18px;cursor:pointer;user-select:none;transition:background .1s}.pdf-opt:hover{background:var(--bg-t)}.pdf-cb{width:18px;height:18px;border-radius:4px;border:1.5px solid var(--bd2);background:var(--bg-p);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s}.pdf-cb.on{background:var(--bx);border-color:var(--bx)}.pdf-cb svg{opacity:0;transition:opacity .1s}.pdf-cb.on svg{opacity:1}.pdf-opt-text{font-size:12px;line-height:1.4}.pdf-opt-hint{font-size:10px;color:var(--tx3);margin-top:2px}
@@ -881,8 +941,11 @@ export default function App() {
   const [controls, setControls] = useState(initControls);
   const [snapshot, setSnapshot] = useState(null);
   const [view, setView] = useState("dashboard");
-  const [collapsed, setCollapsed] = useState(false);
+  const isMob = () => window.innerWidth <= 640;
+  const [collapsed, setCollapsed] = useState(isMob);
   const [dark, setDark] = useState(false);
+  /* Auto-collapse sidebar when resizing to mobile */
+  useEffect(() => { const h = () => { if (isMob()) setCollapsed(true); }; window.addEventListener("resize", h); return () => window.removeEventListener("resize", h); }, []);
   useEffect(() => { document.documentElement.classList.toggle("dark", dark); }, [dark]);
   const [toast, setToast] = useState(null);
   const [pdfOpen, setPdfOpen] = useState(false);
@@ -892,6 +955,7 @@ export default function App() {
   const [methOpen, setMethOpen] = useState(false);
   const fileRef = useRef(null);
   const titles = { dashboard: "Dashboard", controls: "ISO 27001 Annex A" };
+  const nav = useCallback(v => { setView(v); if (isMob()) setCollapsed(true); }, []);
   const showToast = useCallback((t, c) => { setToast({ type: t, content: c }); setTimeout(() => setToast(null), 5000); }, []);
   const upd = useCallback((id, p) => { setControls(prev => prev.map(c => c.id === id ? { ...c, ...p } : c)); }, []);
   const reset = useCallback(() => { setControls(initControls()); setSnapshot(null); }, []);
@@ -923,14 +987,15 @@ export default function App() {
       <div className={`sb${collapsed ? " col" : ""}`}>
         <div className="sl"><svg viewBox="0 0 28 28" fill="none" onClick={() => setCollapsed(!collapsed)} style={{ cursor: "pointer" }}><rect width="28" height="28" rx="6" fill="rgba(255,255,255,0.15)" /><path d="M7 8h14M7 14h10M7 20h14" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" /><circle cx="21" cy="14" r="3" fill="#fff" opacity="0.8" /></svg><span>NIS2 Readiness Check<small>by DextraData</small></span></div>
         <div className="nv">
-          <div className={`ni${view === "dashboard" ? " ac" : ""}`} onClick={() => setView("dashboard")}><svg viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.2" /><rect x="10" y="1" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.2" /><rect x="1" y="10" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.2" /><rect x="10" y="10" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.2" /></svg><span className="ni-label">Dashboard</span></div>
-          <div className={`ni${view === "controls" ? " ac" : ""}`} onClick={() => setView("controls")}><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="1" width="14" height="16" rx="2" stroke="currentColor" strokeWidth="1.1" /><path d="M5.5 5.5L7 7L10.5 3.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /><line x1="5.5" y1="10.5" x2="12.5" y2="10.5" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.35" /><line x1="5.5" y1="14" x2="12.5" y2="14" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.35" /></svg><span className="ni-label">ISO 27001 Annex A</span></div>
+          <div className={`ni${view === "dashboard" ? " ac" : ""}`} onClick={() => nav("dashboard")}><svg viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.2" /><rect x="10" y="1" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.2" /><rect x="1" y="10" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.2" /><rect x="10" y="10" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.2" /></svg><span className="ni-label">Dashboard</span></div>
+          <div className={`ni${view === "controls" ? " ac" : ""}`} onClick={() => nav("controls")}><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="1" width="14" height="16" rx="2" stroke="currentColor" strokeWidth="1.1" /><path d="M5.5 5.5L7 7L10.5 3.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /><line x1="5.5" y1="10.5" x2="12.5" y2="10.5" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.35" /><line x1="5.5" y1="14" x2="12.5" y2="14" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.35" /></svg><span className="ni-label">ISO 27001 Annex A</span></div>
         </div>
         <div className="meth-link" onClick={() => setMethOpen(true)}><span className="meth-link-label">Mapping-Methodik &amp; Quellen</span></div>
         <div className="sf"><a className="sf-card" href="https://grasp-grc.com/produkte/internal-audit/?dexid=CjwKCAjw46HPBhAMEiwASZpLRNaMPKV-N20VYmfRpjZiLdqxXtOz5zVJcbuHS6S2NY402TkbhtuQzRoCmvAQAvD_BwE&utm_term=&utm_campaign=GRASP/DE&utm_source=adwords&utm_medium=ppc&hsa_acc=5779191755&hsa_cam=20004324144&hsa_grp=163269351792&hsa_ad=700390228445&hsa_src=g&hsa_tgt=kwd-3500001&hsa_kw=&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=20004324144&gbraid=0AAAAADfOXqz2Ssu7uah4EvTb0uQd3eQcP&gclid=CjwKCAjw46HPBhAMEiwASZpLRNaMPKV-N20VYmfRpjZiLdqxXtOz5zVJcbuHS6S2NY402TkbhtuQzRoCmvAQAvD_BwE" target="_blank" rel="noopener noreferrer"><div className="sf-logo"><svg viewBox="0 0 30 34" fill="none"><path d="M15 2l8.5 3h2.5v11c0 7.5-11 15-11 15S4 23.5 4 16V5h2.5L15 2z" stroke="#fff" strokeWidth="2.8" strokeLinejoin="round" fill="rgba(255,255,255,.1)"/><circle cx="15" cy="14" r="5" stroke="#fff" strokeWidth="2.2" fill="none"/><line x1="11.2" y1="17.8" x2="6.5" y2="22.5" stroke="#fff" strokeWidth="2.6" strokeLinecap="round"/><path d="M12.8 12.2a3 3 0 0 1 4.2.6" stroke="#E8A0A0" strokeWidth="1.4" strokeLinecap="round" fill="none"/></svg></div><div className="sf-body"><span className="sf-title">Gaps gefunden?</span><span className="sf-sub">Mit GRASP schließen</span></div><svg className="sf-chev" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4 2l4 4-4 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg></a></div>
       </div>
+      {!collapsed && <div className="mob-backdrop" onClick={() => setCollapsed(true)} />}
       <div className="mn">
-        <div className="tb"><h1>{titles[view]}</h1><div className="tb-right">{snapshot && <button className="ta-reset" onClick={reset}>Zurücksetzen</button>}<button className={`dm-toggle2${dark ? " moon" : " sun"}`} onClick={() => setDark(d => !d)} title={dark ? "Light Mode" : "Dark Mode"}>{dark ? <svg viewBox="0 0 20 20" fill="none"><path d="M16.8 11.9A7.2 7.2 0 0 1 8.1 3.2a7.2 7.2 0 1 0 8.7 8.7z" fill="#E8EDF5" stroke="#E8EDF5" strokeWidth="0.5" strokeLinejoin="round"/></svg> : <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="4" fill="#FFD43B" stroke="#F5C211" strokeWidth="0.8"/><path d="M10 2.5v2M10 15.5v2M2.5 10h2M15.5 10h2M5.1 5.1l1.4 1.4M13.5 13.5l1.4 1.4M5.1 14.9l1.4-1.4M13.5 6.5l1.4-1.4" stroke="#F5C211" strokeWidth="1.4" strokeLinecap="round"/></svg>}</button></div></div>
+        <div className="tb"><button className="mob-menu" onClick={() => setCollapsed(c => !c)}><svg viewBox="0 0 20 20" fill="none"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg></button><h1>{titles[view]}</h1><div className="tb-right">{snapshot && <button className="ta-reset" onClick={reset}>Zurücksetzen</button>}<button className={`dm-toggle2${dark ? " moon" : " sun"}`} onClick={() => setDark(d => !d)} title={dark ? "Light Mode" : "Dark Mode"}>{dark ? <svg viewBox="0 0 20 20" fill="none"><path d="M16.8 11.9A7.2 7.2 0 0 1 8.1 3.2a7.2 7.2 0 1 0 8.7 8.7z" fill="#E8EDF5" stroke="#E8EDF5" strokeWidth="0.5" strokeLinejoin="round"/></svg> : <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="4" fill="#FFD43B" stroke="#F5C211" strokeWidth="0.8"/><path d="M10 2.5v2M10 15.5v2M2.5 10h2M15.5 10h2M5.1 5.1l1.4 1.4M13.5 13.5l1.4 1.4M5.1 14.9l1.4-1.4M13.5 6.5l1.4-1.4" stroke="#F5C211" strokeWidth="1.4" strokeLinecap="round"/></svg>}</button></div></div>
         <div className="ct">
           <div className="ct-actions">
             {view === "dashboard" && <button className="pm" onClick={() => setPdfOpen(true)}>Export PDF</button>}
